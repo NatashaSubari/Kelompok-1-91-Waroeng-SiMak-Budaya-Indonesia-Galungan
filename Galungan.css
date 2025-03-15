@@ -1,0 +1,1090 @@
+@font-face {
+    font-family:"Font";
+    src: url(font/Font.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Judul";
+    src: url(font/Magical.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family:"Subjudul";
+    src: url(font/Amarillo.ttf) format('truetype');
+    font-weight: normal;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+div.header {
+    position: relative;
+    width: 1280px;
+    height: 110px;
+}
+
+div.trademark {
+    margin-top: 1px;
+    display: flex;
+    width: 1280px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logobawah {
+    transition: transform 0.3s ease;
+    width: 50%;
+    margin-left: 320px;
+}
+
+.logobawah:hover {
+    transform: scale(1.025);
+}
+
+div.footertengah {
+    position: relative;
+    width: 1280px;
+    margin-bottom: -5px;
+}
+
+body {
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to bottom, #90dfc9, #ccfadc, #f9ffeb);
+    overflow-x: hidden;
+    z-index: 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Navbar */
+div.navbar {
+    top: 0;
+    width: 100%;
+    height: 57px;
+    margin-top: 90px;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 500;
+}
+
+/* Navbar List */
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, #dd4944, #ff6c5a, #fdbe6f);
+    top: 0;
+    width: auto;
+    border-top: 3px solid #ba252e;
+    border-bottom: 3px solid #ba252e;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-family: "Font";
+}
+
+/* Navbar Items */
+li.horizontal {
+    float: right;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 10px;
+    font-family: "Font";
+}
+
+li.linklogo a img {
+    transition: transform 0.3s ease;
+}
+
+li.linklogo a:hover img {
+    transform: scale(1.2);
+}
+
+img.logo {
+    margin-top: 9px;
+    width: 80%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-right: 150px;
+    margin-left: -35px;
+}
+
+/* Navbar Links */
+li.horizontal a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Font";
+    border-radius: 30px; /* Rounded shape */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Hover Effect */
+li.horizontal a:hover {
+    background-color: #fff4d2;
+    color: #ff6c5a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Navbar Item */
+li.horizontal a.active {
+    background-color: #ffeba2;
+    color: #ba252e;
+}
+
+/* Dropdown List Item */
+li.ddhorizontal {
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+/* Dropdown Button */
+.ddhorizontal .dropbtn {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px; /* Makes it round */
+    text-align: center;
+    font-family: "Font";
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Dropdown Button */
+.ddhorizontal .dropbtn:hover {
+    background-color: #fff4d2;
+    color: #ff6c5a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Content */
+.dd-content {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to bottom, #ff6c5a, #fdbe6f);
+    border: 3px solid #ba252e;
+    min-width: 160px;
+    font-family: "Font";
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+}
+
+/* Dropdown Items */
+.dd-content a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-family: "Font";
+    border-radius: 30px; /* Rounded buttons inside dropdown */
+    margin: 5px 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Dropdown Items */
+.dd-content a:hover {
+    background-color: #fff4d2;
+    color: #ff6c5a;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Show Dropdown on Hover */
+.ddhorizontal:hover .dd-content {
+    display: block;
+}
+
+.dd-content a.active {
+    background-color: #ffeba2;
+    color: #ba252e;
+}
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-image: linear-gradient(to bottom, #ff6c5a, #fdbe6f);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+    font-family: "Font";
+}
+
+/* Hover Effect */
+#scrollTopBtn:hover {
+    background-image: linear-gradient(to bottom, #ba252e, #ff6c5a);
+    transform: scale(1.2);
+}
+
+
+div.title {
+    margin-top: 20px;
+    margin-left: 350px;
+    width: 450px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    background-color: #f7ffc7;
+    border: 3px solid #2d5841;
+    padding: 20px 50px;
+    border-radius: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+div.title:hover {
+    transform: scale(1.1);
+}
+
+div.moving-rectangle {
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 20%;
+    height: 100%;
+    background-color: #feb6ac;
+    animation: moveSide 3s infinite alternate ease-in-out;
+}
+
+@keyframes moveSide {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+.judul {
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    color: #cc5f37;
+    z-index: 1;
+    align-items: center; 
+    text-align: center; 
+    font-family: "Judul";
+    letter-spacing: 2px; 
+}
+
+div.row1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+div.videojudul {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+div.row2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    font-family: "Font";
+}
+
+div.columnbagi31 {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.columnbagi31::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('row21.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+div.columnbagi31:hover {
+    transform: scale(1.05);
+}
+
+div.columnbagi32 {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.columnbagi32::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('row22.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+div.columnbagi32:hover {
+    transform: scale(1.05);
+}
+
+div.columnbagi33 {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.columnbagi33::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('row23.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: -1;
+}
+
+div.columnbagi33:hover {
+    transform: scale(1.05);
+}
+
+
+
+.team-container {
+    position: relative;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.box-img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.box-img.open {
+    opacity: 0;
+}
+
+.member-img {
+    position: absolute;
+    width: 65%;
+    height: auto;
+    left: 50%;
+    bottom: 86px; /* Adjust this value to move the image up/down */
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Hover effect */
+.box:hover .closed {
+    opacity: 0;
+}
+
+.box:hover .open {
+    opacity: 1;
+}
+
+.box:hover .member-img {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-20px);
+}
+
+
+
+p.textrow2 {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+}
+
+div.row3 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -15px;
+    height: auto;
+}
+
+div.row4 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+div.row5 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -25px;
+    height: auto;
+}
+
+div.row6 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+.judulsejarah {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #771515;
+    z-index: 1;
+    align-items: center; 
+    text-align: center; 
+    font-family: "Subjudul";
+    margin-top: -10px;
+    margin-bottom: -30px;
+}
+
+p.textrow1 {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    font-family: "Font";
+}
+
+div.columnbagi21 {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+div.columnbagi21:hover {
+    transform: scale(1.025);
+}
+
+div.columnbagi22 {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+div.columnbagi22:hover {
+    transform: scale(1.025);
+}
+
+div.gambarhiasan {
+    margin-left: -15px;
+}
+
+img.gambarsejarah1 {
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+    margin-top: -350px;
+    margin-bottom: 50px;
+    z-index: 1000;
+}
+
+img.gambarsejarah2 {
+    width: 200px;
+    height: auto;
+    margin-left: 1000px;
+    margin-top: -360px;
+    margin-bottom: 63px;
+    z-index: 1000;
+}
+
+
+div.pengantar{
+    justify-content: center;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+}
+
+h1.pengantar {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 10px;
+    position: relative;
+    font-family: "Font";
+}
+
+div.rowmakna {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.rowmakna:hover {
+    transform: scale(1.025);
+}
+
+.judulmakna {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    color: #771515;
+    z-index: 1;
+    align-items: center; 
+    text-align: left; 
+    font-family: "Subjudul";
+    margin-top: -10px;
+    margin-bottom: -30px;
+}
+
+p.makna {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    font-family: "Font";
+}
+
+ul.ulmakna {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    list-style-type: circle;
+    font-family: "Font";
+}
+
+p.italic {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    position: relative;
+    font-style: italic;
+    text-align: center;
+    font-family: "Font";
+}
+
+p.tengahmakna {
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    position: relative;
+    text-align: center;
+    font-family: "Font";
+}
+
+
+div.rowrangkaian {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.rowrangkaian:hover {
+    transform: scale(1.025);
+}
+
+.judulrangkaian {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #771515;
+    z-index: 1;
+    align-items: center; 
+    text-align: left;
+    font-family: "Subjudul";
+    margin-top: -10px;
+    margin-bottom: -30px; 
+}
+
+p.rangkaian {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    font-family: "Font";
+}
+
+
+img.kirirangkaian {
+    margin-left: 275px;
+    margin-top: -280px;
+    width: 250px;
+    height: auto;
+}
+
+img.kananrangkaian {
+    margin-left: 680px;
+    margin-top: -800px;
+    margin-bottom: 17px;
+    width: 250px;
+    height: auto;
+}
+
+li.rangkaian {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 5px;
+    position: relative;
+    font-family: "Font";
+}
+
+ol.olrangkaian {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: -20px;
+    position: relative;
+    list-style-type: lower-alpha;
+    font-family: "Font";
+}
+
+ol.rangkaiansaat {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    list-style-type: decimal;
+    font-family: "Font";
+}
+
+.bus-container {
+    position: relative;
+}
+  
+.moving-image {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 400px;
+    width: 350px;
+    transition: transform 2s ease;
+}
+  
+.hover-image {
+    margin-left: 10px;
+    width: 350px;
+    border-radius: 15px;
+    border: 3px solid #a13f36;
+}
+  
+/* Apply the effect only when hovering over .hover-image */
+.hover-image:hover + .moving-image {
+    transform: translateX(-400px);
+}
+
+.judulwisata {
+    position: relative;
+    font-size: 30px;
+    font-weight: bold;
+    color: #771515;
+    z-index: 1;
+    align-items: center; 
+    text-align: left;
+    font-family: "Subjudul";
+    margin-top: -10px;
+    margin-bottom: -30px;
+}
+
+p.textwisata {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    font-family: "Font";
+}
+
+div.rowwisata {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.rowwisata:hover {
+    transform: scale(1.025);
+}
+
+div.fact-container1 {
+    display: flex;
+    justify-content: center;
+    gap: 225px;
+    margin-top: 150px;
+    padding: 10px;
+    max-width: 1280px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.fact-container1:hover {
+    transform: scale(1.025);
+}
+
+div.fact-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 225px;
+    margin-top: 100px;
+    padding: 10px;
+    max-width: 1280px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.fact-container2:hover {
+    transform: scale(1.025);
+}
+
+.fact-item {
+    position: relative;
+    display: inline-block;
+}
+
+.fact-icon {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.fact-icon:hover {
+    transform: scale(1.1);
+}
+
+.fact-bubble {
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffe57c;
+    color: #a13f36;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 150%;
+    max-width: 450px;
+    word-wrap: break-word;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-weight: bold;
+    font-family: "Font";
+}
+
+
+.fact-item:hover .fact-bubble {
+    opacity: 1;
+}
+
+div.rowucapan {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-family: "Font";
+}
+
+div.rowucapan:hover {
+    transform: scale(1.025);
+}
+
+ol.ucapan {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    position: relative;
+    list-style-type: decimal;
+    font-family: "Font";
+}
+
+p.ngelawar {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    font-family: "Font";
+}
+
+ul.ngelawar {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    position: relative;
+    list-style-type: circle;
+    font-family: "Font";
+}
+
+div.rowngelawar {
+    justify-content: center;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.rowngelawar:hover {
+    transform: scale(1.025);
+}
+
+img.ngelawarimage {
+    margin-left: 950px;
+    margin-top: -75px;
+    margin-bottom: 75px;
+    width: 250px;
+    height: auto;
+}
+
+
+div.faq-container {
+    max-width: 600px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Font";
+    font-weight: bold;
+}
+
+div.question, .answer {
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+div.question:hover {
+    transform: scale(1.025);
+}
+
+div.answer:hover {
+    transform: scale(1.025);
+}
+
+div.question {
+    background-color: #90dfc9;
+    color: #a13f36;
+    align-self: flex-start;
+}
+
+.answer {
+    background-color: #ffe57c;
+    color: #a13f36;
+    align-self: flex-end;
+}
+
+div.rowdaftarpustaka {
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 245, 222, 0.35), rgba(255, 217, 102, 0.35));
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.rowdaftarpustaka:hover {
+    transform: scale(1.025);
+}
+
+div.imageFAQ {
+    height: 1px;
+}
+
+img.FAQimage {
+    width: 200px;
+    height: auto;
+    margin-left: 400px;
+    z-index: 1000;
+}
+
+
+ol.daftarpustaka {
+    text-align: justify;
+    font-size: 16px;
+    font-weight: bold;
+    color: #a13f36;
+    margin-top: 1px;
+    position: relative;
+    list-style-type: decimal;
+    font-family: "Font";
+}
+
+ol.daftarpustaka li {
+    margin-bottom: 15px; /* Space between list items */
+    line-height: 1.6;
+}
+
+ol.daftarpustaka a {
+    text-decoration: none;
+    color: #8B4513; /* Dark brown for links */
+    font-weight: bold;
+}
+
+ol.daftarpustaka a:hover {
+    color: #c96f53; /* Slightly lighter brown on hover */
+    text-decoration: underline;
+}
